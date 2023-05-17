@@ -1,0 +1,181 @@
+.front{
+  background-image: url("./imges/download.jpg");
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.front::after{
+  background-color: rgba(0, 0, 0, 0.404);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+
+}
+.tem{
+  grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+}
+.img .tex{
+  width: 0%;
+  height: 0%;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition: .5s;
+  overflow: hidden;
+}
+.tem .course:hover .img .tex{
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+}
+
+.videosho{
+  width: 40%;
+  width: 40%;
+  padding: 0px 25px;
+  justify-content: space-between;
+}
+.videosho img{
+  width: 120px;  
+}
+iframe{
+  width: 100%;
+}
+.newvideo{
+  width: 60%;
+}
+@media (max-width : 800px) {
+  .newvideo{
+    width: 100%;
+  }
+  .videosho{
+    width: 100%;
+    padding: 10px 25px;
+  }
+  .videosho .show {
+    justify-content: space-between;
+    padding: 2px 10px;
+  }
+}
+
+.mode{
+  width: 47px;
+  height: 21px;
+  background-color: white;
+  position: relative;
+  border: 1px solid black;
+}
+
+.mode .divmod{
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  position: absolute;
+  transition: .5s;
+  right: 0px;
+}
+.mode .divmod.togle{
+  right: 23px !important;
+}
+.heading{
+  width: fit-content;
+  border: 1px solid white;
+  margin: auto;
+  padding: 8px 12px ;
+  box-shadow: 0px 0px 6px 0px;
+  border-radius: 20px;
+  margin-bottom: 27px;
+  transition: .5s;
+}
+
+.heading:hover{
+  background-color: black;
+  color: white;
+}
+
+.about .img{
+  background-color: black;
+  width: 60%;
+  margin: auto;
+  padding: 9px;
+  margin-bottom: 54px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.dark .about .img{
+  background-color: white;
+  position:relative ;
+}
+.about .img img{
+  max-width: 100%;
+  position:relative ;
+  z-index: 3;
+}
+.about .img::after{
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  z-index: 1;
+  right: 0px;
+  top:0px ;
+  height: 10px;
+  animation: name 8s linear;
+  animation-iteration-count: infinite;
+}
+.about .img::before{
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 0px;
+  z-index: 1;
+  left: 0px;
+  height: 0px;
+  bottom: 0px;
+  animation: name 8s linear;
+  animation-iteration-count: infinite;
+  animation-timing-function:ease;
+  animation-play-state: paused;
+}
+
+@keyframes name {
+  0%{
+    width: 0px;
+    height:10px ;
+  }
+  40%{
+    width: 100%;
+    height:10px ;
+
+  }
+  80%{
+    height: 95%;
+    width: 100%;
+  }
+  100%{
+    height: 100%;
+    width: 100%;
+  }
+}
+.text p{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  letter-spacing: 0px;
+  word-spacing: 6px;
+  padding: 10px;
+  line-height: 3;
+  border: 6px solid #eee;
+  border-radius: 23px;
+  box-shadow: 0px 0px 7px;
+}
+.dark .text p{
+  color: white;
+}
